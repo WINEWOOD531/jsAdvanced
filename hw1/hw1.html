@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Homework_01</title>
+</head>
+
+<body style="background-color: #ecf2f2">
+    <ul id="myList">
+        <li id="item1">Первый элемент</li>
+        <li id="item2">Второй элемент</li>
+        <li id="item3">Третий элемент</li>
+        <li id="item4">Четвертый элемент</li>
+    </ul>
+
+    <form>
+        <input type="button" class="button" onclick="selectFirstChild()" value="Выбрать первый элемент" /><br>
+        <input type="button" class="button" onclick="selectLastChild()" value="Выбрать последний элемент" /><br>
+        <input type="button" class="button" onclick="selectNext()" value="Выбрать следующий элемент" /><br>
+        <input type="button" class="button" onclick="selectPrev()" value="Выбрать предыдущий элемент" /><br>
+        <input type="button" class="button" onclick="addElement()" value="Добавить элемент" /><br>
+        <input type="button" class="button" onclick="deleteElement()" value="Удалить элемент" /><br>
+        <input type="button" class="button" onclick="addFirstElement()" value="Добавить в начало" /><br>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
