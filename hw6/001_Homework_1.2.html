@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork</title>
+    <style>
+        #stopButton {
+            width: 50px;
+            height: 40px;
+            position: absolute;
+            top: 100px;
+            color: cornsilk;
+            background-color: blue;
+            border-radius: 20px 5px;
+            border: 1px solid cyan;
+        }
+        
+        #div-ball {
+            position: absolute;
+        }
+        
+        .ball {
+            height: 12rem;
+            width: 12rem;
+            background-color: rgb(40, 70, 243);
+            border-radius: 70px;
+            margin-top: 20rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ball" id="div-ball"></div>
+    <button id="stopButton">STOP</button>
+    <script>
+        let ball = document.getElementById('div-ball');
+        let stopBtn = document.getElementById('stopButton');
+        ball.addEventListener('click', ballMoveHandler);
+        stopBtn.addEventListener('click', ballStopMoveHandler);
+
+        let interval;
+        let count = 10;
+
+        function ballMoveHandler() {
+
+            interval = setInterval(function() {
+                ball.style.left = count + 'px';
+                count = count + 1;
+                if (count + 50 >= document.documentElement.clientWidth) {
+                    count = 1;
+                }
+                console.log(document.documentElement.clientWidth);
+            }, 10);
+
+        }
+
+        function ballStopMoveHandler() {
+            clearInterval(interval);
+        }
+    </script>
+    <!-- 
+	1. drag and drop;
+	2. создайте div, при клике на него, div начинает двигаться вправо, при клике на кнопку - останавливается,
+	при попадании div к краю окна, он переходит к началу окна.
+	-->
+</body>
+
+</html>
