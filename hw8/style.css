@@ -1,0 +1,21 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 150px;
+    background: rgba(63 110 241 / 30%);
+    width: 30vw;
+    margin: auto;
+    border: 3px double;
+	border-radius: 96px 5px;
+}
+
+input[type="button"] {
+    border-radius: 3px 20px;
+    background-color: #62a9e7;
+}
+
+#log-out {
+    display: none;
+}
